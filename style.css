@@ -1,0 +1,67 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* some help with colors */
+:root {
+    --top: #20B57D;
+    --right: #23BB7E;
+    --bottom: #2BC597;
+    --left: #59DABC;
+  }
+
+/* Boring code just to center our diamond :-) */
+.container {
+    height: 100vh;
+    background-color: #253539;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* we are writing a simple code to create a square, remember to insert the position! We need it for the next step! :-D */
+.diamond {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* Let's put some rotation on this square. It already looks more like a beautiful diamond! */
+    transform: rotate(45deg);
+}
+
+/* Now let's create four squares inside the div .diamond thanks to our spans. We have to use absolute position and give these squares some amazing borders!
+Finally four triangles in each square! Nice :-D  */
+span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid var(--top);
+    border-right: 50px solid var(--right);
+    border-bottom: 50px solid var(--bottom);
+    border-left: 50px solid var(--left);
+}
+
+/* Let´s put all the spans in the right position! Yeah! */
+span:nth-child(2) {
+    left: 50%;
+}
+span:nth-child(3) {
+    top: 50%;
+}
+span:nth-child(4) {
+    top: 50%;
+    left: 50%;
+}
+
+/* Let´s create the upper side of the diamond and... */
+span:nth-child(1) {
+    border-top: 50px solid transparent; 
+    border-left: 50px solid transparent;
+}
+
+/* ... Wow! Now it looks like a real diamond! */
+
+/* Thank you :-) */
